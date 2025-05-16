@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - Instituto Luxor</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Instituto Luxor</h1>
+    <p class="subtitulo">Gestión Académica de Excelencia</p>
+    
+    <form onsubmit="return redirectUser(event)">
+      <input type="text" id="user" placeholder="Usuario" required />
+      <input type="password" id="pass" placeholder="Contraseña" required />
+      <select id="role" required>
+        <option value="">Selecciona tu rol</option>
+        <option value="alumno">Alumno</option>
+        <option value="docente">Docente / Preceptora</option>
+        <option value="directivo">Directivo</option>
+      </select>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    © 2025 Instituto Luxor - Educación con Distinción
+  </footer>
+
+  <script>
+    function redirectUser(event) {
+      event.preventDefault();
+      const role = document.getElementById("role").value;
+      if (role === "alumno") {
+        window.location.href = "alumnos.html";
+      } else {
+        window.location.href = "profesydirectivos.html";
+      }
+    }
+  </script>
+</body>
+</html>
