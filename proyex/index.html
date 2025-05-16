@@ -2,100 +2,159 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Instituto Luxor</title>
-  <link rel="stylesheet" href="css/index.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-<div class="icono">
-    <img src="luxorlogo.png" alt="Logo del Instituto Luxor" class="icon-tienda" width="240" height="260"   />
-</div>
-
-
-  <!-- NAV -->
-  <header class="navbar">
-    <div class="logo">Instituto Luxor</div>
-    <ul class="nav">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#historia">Nuestra Historia</a></li>
-      <li><a href="#valores">Excelencia</a></li>
-      <li><a href="#instalaciones">Campus</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="login.html" class="btn-acceso">Acceso</a></li>
-    </ul>
-  </header>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-burdeos sticky-top">
+    <div class="container">
+      <img src="imagenes/log.png" width="80" height="80" alt="Logo" />
+      <a class="navbar-brand ms-3" href="#">Instituto Luxor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLuxor">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navLuxor">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#historia">Nuestra Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#primario">Nivel Primario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#secundario">Nivel Secundario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#elegirnos">¿Por qué elegirnos?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="btn btn-warning" href="login.html">Acceso</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="overlay">
-      <h1>Formamos líderes para cambiar el mundo</h1>
+    <div>
+      <h1>Educamos a la élite del mañana</h1>
       <p>Excelencia. Distinción. Prestigio.</p>
-      <a href="login.html" class="btn-dorado">Ingresar al Sistema</a>
+      <a href="#historia" class="btn btn-warning mt-3">Conocé nuestra historia</a>
     </div>
   </section>
 
   <!-- HISTORIA -->
-  <section id="historia" class="seccion">
-    <h2>Una tradición de grandeza</h2>
-    <p>Desde 1958, el Instituto Luxor ha sido cuna de presidentes, científicos y artistas reconocidos internacionalmente. Nuestra misión es clara: educar a los mejores, para liderar el mañana.</p>
+  <section id="historia" class="container text-center">
+    <h2>Una tradición forjada en oro</h2>
+    <p>
+      Fundado en 1958 en el corazón de Recoleta, el Instituto Luxor ha sido sinónimo de excelencia académica, refinamiento social y liderazgo internacional. 
+      Nacido del sueño de una élite visionaria, el colegio ha formado generaciones de estudiantes que hoy marcan el rumbo del mundo.
+    </p>
+    <p>
+      En nuestras aulas se moldean mentes brillantes. Cada rincón de nuestro campus respira historia, cultura y ambición. 
+      Somos más que una escuela: somos un legado.
+    </p>
   </section>
 
-  <!-- VALORES -->
-  <section id="valores" class="seccion valores">
-    <h2>Excelencia sin compromisos</h2>
-    <div class="grid-valores">
-      <div>
-        <h3>🇬🇧 Educación Bilingüe</h3>
-        <p>Con programas internacionales y certificaciones de Cambridge.</p>
-      </div>
-      <div>
-        <h3>🏛 Formación Integral</h3>
-        <p>Desde filosofía hasta robótica. No hay límites para la mente.</p>
-      </div>
-      <div>
-        <h3>🎓 Egresados Destacados</h3>
-        <p>El 92% de nuestros alumnos ingresan a universidades top 100.</p>
+  <!-- PRIMARIO -->
+  <section id="primario" class="bg-light text-center">
+    <div class="container">
+      <h2>Primaria de Alto Nivel</h2>
+      <p>
+        Desde el primer grado, nuestros alumnos son introducidos al pensamiento crítico, las artes, los idiomas y la ciencia de forma lúdica pero rigurosa.
+        El programa bilingüe y los viajes culturales a Europa desde 5to grado hacen de nuestra primaria una experiencia inolvidable.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECUNDARIO -->
+  <section id="secundario" class="text-center">
+    <div class="container">
+      <h2>Secundaria de Élite Internacional</h2>
+      <p>
+        Con un enfoque en liderazgo, innovación y responsabilidad global, nuestro secundario prepara a los estudiantes para universidades de renombre mundial.
+        Participan en ferias científicas internacionales, Modelos ONU, pasantías en empresas reales y proyectos de robótica avanzada.
+      </p>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section id="elegirnos" class="bg-light text-center">
+    <div class="container">
+      <h2>¿Por qué Luxor es distinto?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 shadow bg-white">
+            <h4>🔬 Tecnología de Vanguardia</h4>
+            <p>Laboratorios equipados con IA, impresoras 3D y simuladores cuánticos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 shadow bg-white">
+            <h4>🌍 Enfoque Global</h4>
+            <p>Cursos internacionales, intercambios en 5 países y certificaciones Cambridge & DELF.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 shadow bg-white">
+            <h4>🎓 Egresados Prestigiosos</h4>
+            <p>El 98% accede a universidades top. CEOs, embajadores y artistas de primer nivel.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- INSTALACIONES -->
-  <section id="instalaciones" class="seccion instalaciones">
-    <h2>Un campus de clase mundial</h2>
-    <div class="carousel">
-      <img src="luxorlogo.png" alt="Campus del Instituto">
-      <img src="luxorlogo.png" alt="Biblioteca">
-      <img src="luxorlogo.png" alt="Salón de excelencia">
+  <!-- INFRAESTRUCTURA -->
+  <section id="infraestructura" class="text-center">
+    <div class="container">
+      <h2>Instalaciones de otro nivel</h2>
+      <p>
+        Biblioteca de mármol blanco con 5 pisos, salones con tecnología smart, observatorio astronómico propio y un teatro estilo europeo.
+        Todo el campus está diseñado para inspirar grandeza y creatividad.
+      </p>
+      <img src="imagenes/instalaciones.jpg" class="img-fluid rounded shadow mt-4" alt="Instalaciones Luxor" />
     </div>
-    <p>Nuestras instalaciones fueron diseñadas para la grandeza. Laboratorios de última generación, biblioteca de cinco pisos, teatros y un estadio propio.</p>
   </section>
 
   <!-- TESTIMONIOS -->
-  <section class="seccion testimonios">
-    <h2>Lo que dicen nuestros egresados</h2>
-    <blockquote>“Gracias al Instituto Luxor, hoy dirijo una compañía en Silicon Valley.” <br><span>– Ignacio De Vedia, CEO</span></blockquote>
-    <blockquote>“Nunca imaginé que una escuela pudiera transformarme así.” <br><span>– Isabela Orlandi, Doctora en Filosofía, Oxford</span></blockquote>
+  <section class="bg-light text-center">
+    <div class="container">
+      <h2>Lo que dicen nuestros egresados</h2>
+      <blockquote class="blockquote">
+        <p>“Gracias a Luxor, hoy lidero operaciones en tres continentes.”</p>
+        <footer class="blockquote-footer">Dr. Matías Aráoz, Director Global en ONU</footer>
+      </blockquote>
+      <blockquote class="blockquote mt-4">
+        <p>“En Luxor no solo aprendí, me transformé.”</p>
+        <footer class="blockquote-footer">Lucía Figari, Compositora y Premio Nobel de Literatura</footer>
+      </blockquote>
+    </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="seccion contacto">
-    <h2>Ubicación & Contacto</h2>
-    <p>📍 Peña 2528, C1119, CABA</p>
-    <p>📞 (011) 5555-7777 | ✉️ info@luxor.edu.ar</p>
-    <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.167265702918!2d-58.395260384479004!3d-34.5902065804641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaec32a62d25%3A0x20e5e254a5df4dc!2sPe%C3%B1a%202528%2C%20C1119AAH%20CABA!5e0!3m2!1ses-419!2sar!4v1715721882653!5m2!1ses-419!2sar"
-    width="100%" height="400" style="border:0;" allowfullscreen=""
-    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-  
+  <section id="contacto" class="text-center">
+    <div class="container">
+      <h2>Ubicación & Contacto</h2>
+      <p>📍 Peña 2528, CABA | ☎️ (011) 5555-7777 | ✉️ info@luxor.edu.ar</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        width="100%" height="400" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Instituto Luxor. Excelencia en Educación.</p>
+  <footer>
+    <p>&copy; 2025 Instituto Luxor. Formamos la élite intelectual de América Latina.</p>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
