@@ -15,75 +15,166 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-burdeos sticky-top">
-    <div class="container">
-      <img src="imagenes/log.png" width="80" height="80" alt="Logo" />
-      <a class="navbar-brand ms-3" href="#">Instituto Luxor</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLuxor">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navLuxor">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#historia">Nuestra Historia</a></li>
-          <li class="nav-item"><a class="nav-link" href="#primario">Nivel Primario</a></li>
-          <li class="nav-item"><a class="nav-link" href="#secundario">Nivel Secundario</a></li>
-          <li class="nav-item"><a class="nav-link" href="#elegirnos">¿Por qué elegirnos?</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          <li class="nav-item"><a class="btn btn-warning" href="login.html">Acceso</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-burdeos sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="imagenes/log.png" width="40" height="40" alt="Logo" />
+      <span class="ms-3">Instituto Luxor</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLuxor">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navLuxor">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-warning ms-lg-5" href="login.html">Acceso</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+  <!-- Botón de Modo Noche/Día -->
+<div class="modo-toggle">
+  <button id="modoBtn" onclick="toggleModo()">☀️ / 🌙</button>
+</div>
 
   <!-- HERO -->
   <section class="hero">
-    <div>
+    <div class="scuare">
       <h1>Educamos a la élite del mañana</h1>
       <p>Excelencia. Distinción. Prestigio.</p>
-      <a href="#historia" class="btn btn-warning mt-3">Conocé nuestra historia</a>
+      <a href="#historia" class="btn btn-warning mt-1">Conocé nuestra historia</a>
     </div>
   </section>
 
   <!-- HISTORIA -->
-  <section id="historia" class="container text-center">
-    <h2>Una tradición forjada en oro</h2>
+ <section id="historia" class="historia-luxor seccion-fondo py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 texto">
+        <h2 class="mb-4">La leyenda del fundador</h2>
+        <p><strong>Don Alejandro Luxor</strong> nació en 1920, en el seno de una familia tradicional de Buenos Aires, reconocida por su linaje diplomático y académico. Desde joven se destacó por su visión, su carácter reservado y una determinación inquebrantable. Tras estudiar en París y Londres, regresó al país con una misión clara: fundar una institución educativa que combinara excelencia europea con valores argentinos.</p>
+        <p>En 1958, con el apoyo de intelectuales, empresarios y filántropos, abrió las puertas del <strong>Instituto Luxor</strong> en Recoleta, nombrado en honor a su apellido y al aura de grandeza que representa. Desde entonces, la institución ha sido símbolo de prestigio, moldeando a generaciones de líderes con el sello indeleble de su fundador.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="imagenes/fundadorluxor.jpg" alt="Don Alejandro Luxor" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMARIO -->
+<section id="primario" class="primaria-luxor py-5 seccion-fondo text-center">
+  <div class="container">
+            <h2 class="mb-4">Primaria de Alto Nivel</h2>
+    <!-- Carrusel debajo del texto -->
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-10">
+        <div id="carruselPrimaria" class="carousel slide shadow rounded" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagenes/pri0.jpg" class="d-block w-100" alt="Clase de arte en Luxor">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/pri1.jpg" class="d-block w-100" alt="Laboratorio de ciencia en primaria">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/pri2.jpg" class="d-block w-100" alt="Clases bilingües en acción">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/pri3.jpg" class="d-block w-100" alt="Viaje educativo a Europa">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrimaria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselPrimaria" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3>La base sólida para una vida de pensamiento, cultura y valores</h3>
+    <br>
     <p>
-      Fundado en 1958 en el corazón de Recoleta, el Instituto Luxor ha sido sinónimo de excelencia académica, refinamiento social y liderazgo internacional. 
-      Nacido del sueño de una élite visionaria, el colegio ha formado generaciones de estudiantes que hoy marcan el rumbo del mundo.
+      En el Instituto Luxor, la etapa primaria constituye el cimiento sobre el cual se erige toda una vida de excelencia académica y personal. Nuestro enfoque pedagógico se basa en una combinación armoniosa entre el rigor intelectual y el desarrollo humano, formando niños íntegros, curiosos y con un fuerte sentido de identidad.
     </p>
     <p>
-      En nuestras aulas se moldean mentes brillantes. Cada rincón de nuestro campus respira historia, cultura y ambición. 
-      Somos más que una escuela: somos un legado.
+      Desde primer grado, los alumnos se sumergen en un entorno bilingüe intensivo (español-inglés), con docentes especializados y actividades integradas que fortalecen la comunicación efectiva desde los primeros años. Se prioriza el pensamiento crítico a través de proyectos interdisciplinarios, la lectura analítica, la resolución creativa de problemas y la argumentación oral.
     </p>
-  </section>
+    <p>
+      Las artes tienen un rol protagónico en el proceso formativo: música, teatro, expresión corporal y artes plásticas se abordan como herramientas para el autoconocimiento y la apreciación estética. Además, el currículo incluye ciencias naturales con laboratorios adaptados, robótica, y un enfoque constructivista en matemáticas.
+    </p>
+    <p>
+      El Instituto Luxor no solo forma estudiantes brillantes, sino personas nobles, comprometidas con su entorno y preparadas para afrontar con seguridad el futuro.
+    </p>
 
-  <!-- PRIMARIO -->
-  <section id="primario" class="bg-light text-center">
-    <div class="container">
-      <h2>Primaria de Alto Nivel</h2>
-      <p>
-        Desde el primer grado, nuestros alumnos son introducidos al pensamiento crítico, las artes, los idiomas y la ciencia de forma lúdica pero rigurosa.
-        El programa bilingüe y los viajes culturales a Europa desde 5to grado hacen de nuestra primaria una experiencia inolvidable.
-      </p>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECUNDARIO -->
-  <section id="secundario" class="text-center">
-    <div class="container">
-      <h2>Secundaria de Élite Internacional</h2>
-      <p>
-        Con un enfoque en liderazgo, innovación y responsabilidad global, nuestro secundario prepara a los estudiantes para universidades de renombre mundial.
-        Participan en ferias científicas internacionales, Modelos ONU, pasantías en empresas reales y proyectos de robótica avanzada.
-      </p>
+  <!-- SECUNDARIA -->
+<section id="secundaria" class="secundaria-luxor py-5 seccion-fondo text-center">
+  <div class="container">
+    <h2 class="mb-4">Secundaria de Excelencia</h2>
+    
+    <!-- Carrusel -->
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-10">
+        <div id="carruselSecundaria" class="carousel slide shadow rounded" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagenes/sec0.jpg" class="d-block w-100" alt="Clase de ciencias en secundaria">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/sec1.jpeg" class="d-block w-100" alt="Simulación ONU en el Instituto Luxor">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/sec2.webp" class="d-block w-100" alt="Alumnos trabajando en proyectos de robótica">
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/sec3.jpg" class="d-block w-100" alt="Viaje educativo internacional">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselSecundaria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselSecundaria" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
     </div>
-  </section>
+    <br>
+    <h3>Intelecto, liderazgo y carácter para el mundo que viene</h3>
+    <br>
+    <p>
+      La escuela secundaria del Instituto Luxor es el espacio donde el conocimiento se transforma en sabiduría y la formación académica se integra con una ética sólida y compromiso social. En esta etapa fundamental, nuestros estudiantes no solo consolidan saberes, sino que desarrollan una identidad crítica, reflexiva y global.
+    </p>
+    <p>
+      El plan de estudios incluye un enfoque intensivo en ciencias, humanidades, tecnología y comunicación. Los alumnos acceden a laboratorios de última generación, simulaciones de ONU y debates académicos internacionales, además de programas de intercambio y pasantías profesionales desde 5to año.
+    </p>
+    <p>
+      Contamos con talleres de investigación, clubes de programación, diseño, filosofía y oratoria, además de un programa de acompañamiento vocacional personalizado que guía a cada estudiante en su elección universitaria o profesional con claridad y propósito.
+    </p>
+    <p>
+      La secundaria del Instituto Luxor no es solo una etapa educativa: es un trampolín hacia el futuro, una experiencia formativa integral donde el alumno se convierte en un ciudadano del mundo, seguro, libre y preparado.
+    </p>
+  </div>
+</section>
+
 
   <!-- POR QUÉ ELEGIRNOS -->
-  <section id="elegirnos" class="bg-light text-center">
+  <section id="elegirnos" class="seccion-fondo text-center">
     <div class="container">
       <h2>¿Por qué Luxor es distinto?</h2>
       <div class="row g-4">
@@ -110,7 +201,7 @@
   </section>
 
   <!-- INFRAESTRUCTURA -->
-  <section id="infraestructura" class="text-center">
+  <section id="infraestructura" class="seccion-fondo text-center">
     <div class="container">
       <h2>Instalaciones de otro nivel</h2>
       <p>
@@ -122,7 +213,7 @@
   </section>
 
   <!-- TESTIMONIOS -->
-  <section class="bg-light text-center">
+  <section class="seccion-fondo text-center">
     <div class="container">
       <h2>Lo que dicen nuestros egresados</h2>
       <blockquote class="blockquote">
@@ -137,24 +228,25 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="text-center">
+  <section id="contacto" class="seccion-fondo text-center">
     <div class="container">
       <h2>Ubicación & Contacto</h2>
       <p>📍 Peña 2528, CABA | ☎️ (011) 5555-7777 | ✉️ info@luxor.edu.ar</p>
       <iframe
-        src="https://www.google.com/maps/embed?pb=..."
-        width="100%" height="400" style="border:0;" allowfullscreen=""
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.167265702918!2d-58.395260384479004!3d-34.5902065804641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaec32a62d25%3A0x20e5e254a5df4dc!2sPe%C3%B1a%202528%2C%20C1119AAH%20CABA!5e0!3m2!1ses-419!2sar!4v1715721882653!5m2!1ses-419!2sar"
+    width="100%" height="400" style="border:0;" allowfullscreen=""
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="text-center">
     <p>&copy; 2025 Instituto Luxor. Formamos la élite intelectual de América Latina.</p>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

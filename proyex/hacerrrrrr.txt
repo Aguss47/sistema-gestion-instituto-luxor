@@ -1,7 +1,3 @@
- Interacciones visuales por sección
-Sección	Interacción sugerida
-🏛 Hero / Inicio	Texto con animación fade-in o zoom al cargar, y botón con hover suave.
-🏆 "Una tradición forjada en oro"	ScrollReveal o fade desde abajo en párrafos e imagen con sombra en hover.
 🧒 Nivel Primario	Carrousel horizontal de actividades, juegos o fotos infantiles (Swipe o botón).
 🎓 Nivel Secundario	Acordeón con materias destacadas, clubes o testimonios de alumnos.
 💎 ¿Por qué Luxor es distinto?	Tarjetas con efecto hover (elevación y zoom suave).
