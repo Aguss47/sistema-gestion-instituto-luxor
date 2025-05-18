@@ -193,8 +193,8 @@ section p {
 
 /* Cambios para modo oscuro */
 body.modo-oscuro .seccion-fondo {
-  background-color: #111;
-  color: #f5f5f5;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* posicion */
