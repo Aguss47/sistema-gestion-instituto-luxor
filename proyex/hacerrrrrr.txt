@@ -1,7 +1,0 @@
-🧒 Nivel Primario	Carrousel horizontal de actividades, juegos o fotos infantiles (Swipe o botón).
-🎓 Nivel Secundario	Acordeón con materias destacadas, clubes o testimonios de alumnos.
-💎 ¿Por qué Luxor es distinto?	Tarjetas con efecto hover (elevación y zoom suave).
-🏫 Instalaciones	Carrusel de imágenes de ambientes lujosos. Ya lo tenías, podemos mejorarlo.
-📰 Noticias & Novedades	Tarjetas con efecto hover para ver más texto o expandir.
-💬 Testimonios	Slider automático o texto con efecto "typewriter" que se alterna.
-📍 Contacto	Mapa con Zoom interactivo y animación cuando se muestra.
