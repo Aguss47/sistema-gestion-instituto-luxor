@@ -1,3 +1,6 @@
+
+
+
 /* FUENTE */
 body {
   font-family: 'tymes new roman', serif;
@@ -220,6 +223,7 @@ body.modo-oscuro .seccion-fondo {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: background-color 0.3s;
+  
 }
 
 body.modo-oscuro {
@@ -253,3 +257,5 @@ footer {
 footer p {
   margin: 0;
 }
+
+
