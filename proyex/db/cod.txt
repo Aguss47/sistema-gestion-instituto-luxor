@@ -1,0 +1,237 @@
+Table instituciones {
+  id_institucion integer [primary key]
+  nombre varchar
+  direccion varchar
+  telefono varchar
+  email varchar
+}
+
+Table roles {
+  id_rol integer [primary key]
+  nombre_rol varchar
+}
+
+Table usuarios {
+  id_usuario integer [primary key]
+  nombre varchar
+  apellido varchar
+  email varchar
+  contraseña varchar
+  telefono varchar
+  rol_id integer
+  id_institucion integer [ref: > instituciones.id_institucion]
+  estado varchar
+  fecha_creacion timestamp
+  ultimo_login timestamp
+}
+
+Table permisos {
+  id_permiso integer [primary key]
+  nombre varchar
+}
+
+Table usuario_permiso {
+  id_usuario integer [ref: > usuarios.id_usuario]
+  id_permiso integer [ref: > permisos.id_permiso]
+}
+
+Table alumnos {
+  id_alumno integer [primary key, ref: > usuarios.id_usuario]
+  legajo varchar
+  fecha_nacimiento date
+}
+
+Table tutores {
+  id_tutor integer [primary key]
+  nombre varchar
+  apellido varchar
+  dni varchar
+  telefono varchar
+  email varchar
+}
+
+Table alumno_tutor {
+  id_alumno integer [ref: > alumnos.id_alumno]
+  id_tutor integer [ref: > tutores.id_tutor]
+  relacion varchar
+}
+
+Table inscripciones_alumnos {
+  id_inscripcion integer [primary key]
+  id_alumno integer [ref: > alumnos.id_alumno]
+  sede varchar
+  modalidad varchar
+  fecha_inscripcion timestamp
+  observaciones text
+  estado varchar
+}
+
+Table cursos {
+  id_curso integer [primary key]
+  nombre varchar
+  año integer
+  turno varchar
+  id_preceptora integer [ref: > preceptoras.id_preceptora]
+}
+
+Table asignaciones_curso {
+  id_asignacion integer [primary key]
+  id_inscripcion integer [ref: > inscripciones_alumnos.id_inscripcion]
+  id_curso integer [ref: > cursos.id_curso]
+  fecha_asignacion timestamp
+}
+
+Table docentes {
+  id_docente integer [primary key, ref: > usuarios.id_usuario]
+  titulo varchar
+  especialidad varchar
+}
+
+Table preceptoras {
+  id_preceptora integer [primary key, ref: > usuarios.id_usuario]
+  interno varchar
+}
+
+Table materias {
+  id_materia integer [primary key]
+  nombre varchar
+  año integer
+  id_docente integer [ref: > docentes.id_docente]
+}
+
+Table unidades_materia {
+  id_unidad integer [primary key]
+  id_materia integer [ref: > materias.id_materia]
+  titulo varchar
+  descripcion text
+}
+
+Table inscripciones_materias {
+  id_insc_materia integer [primary key]
+  id_alumno integer [ref: > alumnos.id_alumno]
+  id_materia integer [ref: > materias.id_materia]
+  fecha_inscripcion timestamp
+}
+
+Table notas {
+  id_nota integer [primary key]
+  id_insc_materia integer [ref: > inscripciones_materias.id_insc_materia]
+  trimestre integer
+  calificacion numeric
+}
+
+Table asistencias {
+  id_asistencia integer [primary key]
+  id_insc_materia integer [ref: > inscripciones_materias.id_insc_materia]
+  fecha date
+  presente boolean
+}
+
+Table eventos_institucionales {
+  id_evento integer [primary key]
+  titulo varchar
+  descripcion text
+  fecha date
+  tipo_evento varchar
+  curso_id integer [ref: > cursos.id_curso, null]
+}
+
+Table archivos_materias {
+  id_archivo integer [primary key]
+  id_materia integer [ref: > materias.id_materia]
+  nombre_archivo varchar
+  url varchar
+  fecha_subida timestamp
+}
+
+Table notificaciones {
+  id_notificacion integer [primary key]
+  id_usuario integer [ref: > usuarios.id_usuario]
+  titulo varchar
+  cuerpo text
+  leido boolean
+  fecha_envio timestamp
+}
+
+Table auditorias {
+  id_auditoria integer [primary key]
+  tabla_afectada varchar
+  id_registro integer
+  accion varchar
+  usuario_id integer [ref: > usuarios.id_usuario]
+  fecha timestamp
+  detalle text
+}
+
+Table historial_cambios {
+  id_cambio integer [primary key]
+  tabla varchar
+  id_registro integer
+  campo_modificado varchar
+  valor_anterior text
+  valor_nuevo text
+  id_usuario integer [ref: > usuarios.id_usuario]
+  fecha timestamp
+}
+
+Table pagos {
+  id_pago integer [primary key]
+  id_alumno integer [ref: > alumnos.id_alumno]
+  concepto varchar
+  monto decimal
+  fecha_pago timestamp
+  estado varchar
+}
+
+Table cuotas {
+  id_cuota integer [primary key]
+  id_alumno integer [ref: > alumnos.id_alumno]
+  mes integer
+  año integer
+  monto decimal
+  fecha_vencimiento date
+  estado varchar
+}
+
+Table mensajes {
+  id_mensaje integer [primary key]
+  emisor_id integer [ref: > usuarios.id_usuario]
+  receptor_id integer [ref: > usuarios.id_usuario]
+  cuerpo text
+  fecha_envio timestamp
+  leido boolean
+}
+
+Table salidas {
+  id_salida integer [primary key]
+  titulo varchar
+  descripcion text
+  fecha date
+  curso_id integer [ref: > cursos.id_curso]
+  lugar_destino varchar
+}
+
+Table alumno_salida {
+  id_salida integer [ref: > salidas.id_salida]
+  id_alumno integer [ref: > alumnos.id_alumno]
+  va boolean
+  url_documento varchar
+  fecha_registro timestamp
+}
+
+Table formularios_contacto {
+  id_formulario integer [primary key]
+  nombre varchar
+  email varchar
+  mensaje text
+  fecha_envio timestamp
+  respondido boolean
+}
+
+Table suspensiones {
+  id_suspension integer [primary key]
+  id_usuario integer [ref: > usuarios.id_usuario]
+  motivo text
+  fecha_inicio timestamp
+  fecha_fin timestamp
+}
